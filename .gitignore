@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+platforms/*/*
+plugins/*/*
+plugins/*.json
+www/bower_components/**
