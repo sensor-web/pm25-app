@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SensorWeb App</name>
+    <name>PM2.5 App</name>
     <description>
-        A simple application to visualize SensorWeb data.
+        A simple application to visualize SensorWeb PM2.5 data.
     </description>
     <author email="elin@mozilla.com" href="http://sensorweb.io">
         Eddie Lin

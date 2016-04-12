@@ -1,6 +1,6 @@
-# SensorWeb App
+# PM2.5 App
 
-This is a simple app that visualize data from SensorWeb.
+This is a simple app that visualize PM2.5 data from SensorWeb.
 
 ## Prerequisites
 
