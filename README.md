@@ -33,3 +33,11 @@ Test in Browser:
 ```sh
 $ cordova run browser
 ```
+
+
+
+[Cordova Platform Guides]: https://cordova.apache.org/docs/en/5.1.1/guide/platforms/index.html
+[git]: https://git-scm.com/
+[node.js]: https://nodejs.org/
+[cordova]: https://cordova.apache.org/docs/en/5.1.1/guide/overview/index.html 
+
