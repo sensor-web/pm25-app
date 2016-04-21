@@ -34,8 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-	//ref = window.open('http://sensorweb.io/project-detail.html', '_blank', 'location=no,toolbar=no');
-	window.location = 'http://sensorweb.io/project-detail.html';
+	window.location = 'http://sensorweb.io/project.html';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
