@@ -34,13 +34,11 @@ function checkLocation() {
           if(result === 1){ // Yes
             cordova.plugins.diagnostic.switchToLocationSettings();
           }
-          window.location = APP_URL;
+          // window.location = APP_URL;
         },
         'Open Location Settings?',
         ['Yes', 'No']
       );
-    } else {
-      window.location = APP_URL;
     }
   }, function(error){
     console.error("The following error occurred: "+error);
@@ -66,6 +64,7 @@ function checkConnection() {
 var app = {
     // Application Constructor
     initialize: function() {
+      this.displaySplash('PM2.5 MONITOR');
       this.bindEvents();
     },
     // Bind Event Listeners
@@ -84,7 +83,7 @@ var app = {
       // Exit the app if there's no connection.
       checkConnection().then(
         function() {
-          app.receivedEvent('deviceready');
+          app.displayContent();
           checkLocation();
         },
         function() {
@@ -92,16 +91,21 @@ var app = {
         }
       );
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-      var parentElement = document.getElementById(id);
-      var listeningElement = parentElement.querySelector('.listening');
-      var receivedElement = parentElement.querySelector('.received');
-
-      listeningElement.setAttribute('style', 'display:none;');
-      receivedElement.setAttribute('style', 'display:block;');
-
-      console.log('Received Event: ' + id);
+    displaySplash: function(string) {
+      var title = document.querySelector('#splash .title');
+      title.textContent = string;
+      title.setAttribute('style', 'display:block;');
+    },
+    // Switch to content and hide splash after event received and accessible
+    // network.
+    displayContent: function() {
+      var splash = document.querySelector('#splash');
+      var appContent = document.querySelector('#app-content');
+      appContent.src = APP_URL;
+      appContent.addEventListener('load', function() {
+        splash.setAttribute('style', 'display:none;');
+        appContent.setAttribute('style', 'display:block;');
+      });
     }
 };
 
