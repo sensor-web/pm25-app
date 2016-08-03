@@ -4,13 +4,14 @@
     <description>
         A simple application to visualize SensorWeb PM2.5 data.
     </description>
-    <author email="elin@mozilla.com" href="http://sensorweb.io">
+    <author email="elin@mozilla.com" href="https://sensorweb.io">
         Eddie Lin
     </author>
     <content src="index.html" />
-    <access origin="http://sensorweb.io" subdomains="true" />
+    <access origin="https://sensorweb.io" subdomains="true" />
     <access origin="*" />
-    <allow-navigation href="http://sensorweb.io/*" />
+    <allow-navigation href="about:blank" />
+    <allow-navigation href="https://sensorweb.io/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -19,12 +20,10 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon src="www/img/logo.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <icon src="www/img/logo.png" />
     </platform>
     <engine name="android" spec="~5.1.1" />
     <engine name="ios" spec="~4.1.1" />

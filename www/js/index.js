@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-const APP_URL = 'http://sensorweb.io/pm25-app.html';
+const APP_URL = 'https://sensorweb.io/pm25-app.html';
 
 function checkLocation() {
   // Browser mode doesn't support cordova.plugins.diagnostic
